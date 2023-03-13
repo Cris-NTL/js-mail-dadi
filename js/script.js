@@ -6,6 +6,7 @@
 
 // array email autorizzate
 const email = ['paolo@gmail.com', 'giovanna@hotmail.com', 'luigi@yahoo.com', 'mario@hmail.com'];
+console.log(email);
 
 // istruzione inserimento email da utente
 const userMail = prompt('Inserisci la tua email');
@@ -39,6 +40,10 @@ const userNumber = Math.floor((Math.random() * 6) + 1);
 const pcNumber = Math.floor((Math.random() * 6) + 1);
 console.log(userNumber, pcNumber);
 
+// stampa i numeri
+let numbersElement = document.getElementById("numbers");
+numbersElement.innerHTML = `Giocatore: ${userNumber} Computer: ${pcNumber}`;
+
 // definire il vincitore
 let player = ''
 
@@ -53,6 +58,3 @@ if (userNumber > pcNumber) {
 // stampare il risultato
 const resultGameElement = document.getElementById("textGame");
 resultGameElement.innerHTML = player;
-
-
-// console.log(`${player}`);
