@@ -6,7 +6,6 @@
 
 // array email autorizzate
 const email = ['paolo@gmail.com', 'giovanna@hotmail.com', 'luigi@yahoo.com', 'mario@hmail.com'];
-console.log(email);
 
 // istruzione inserimento email da utente
 const userMail = prompt('Inserisci la tua email');
@@ -15,23 +14,20 @@ const userMail = prompt('Inserisci la tua email');
 let result = false;
 
 for (let i = 0; i < email.length; i++) {
-
     const verifiedEmail = email[i];
-
     if (userMail === verifiedEmail) {
         result = true;
-        console.log('Accesso autorizzato');
     }
-
 }
 
-console.log(result);
-
-if (result === false) {
-
-    console.log('Accesso negato');
-
+// stampa in html il controllo
+const resultElement = document.getElementById("text");
+if (result) {
+    resultElement.innerHTML = "Accesso autorizzato";
+} else {
+    resultElement.innerHTML = "Accesso negato";
 }
+
 
 // Dadi
 
@@ -52,7 +48,11 @@ if (userNumber > pcNumber) {
     player = 'Hai perso questa mano'
 } else {
     player = 'Hai chiuso in pari questa mano'
-}   
+}
 
 // stampare il risultato
-console.log(`${player}`);
+const resultGameElement = document.getElementById("textGame");
+resultGameElement.innerHTML = player;
+
+
+// console.log(`${player}`);
