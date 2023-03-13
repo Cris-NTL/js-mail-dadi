@@ -32,3 +32,27 @@ if (result === false) {
     console.log('Accesso negato');
 
 }
+
+// Dadi
+
+// User e PC avranno un numero random
+// Il punto più alto vince la mano
+
+// randomizzare un numero per ogni giocatore
+const userNumber = Math.floor((Math.random() * 6) + 1);
+const pcNumber = Math.floor((Math.random() * 6) + 1);
+console.log(userNumber, pcNumber);
+
+// definire il vincitore
+let player = ''
+
+if (userNumber > pcNumber) {
+    player = 'Hai vinto questa mano'
+} else if (userNumber < pcNumber) {
+    player = 'Hai perso questa mano'
+} else {
+    player = 'Hai chiuso in pari questa mano'
+}   
+
+// stampare il risultato
+console.log(`${player}`);
